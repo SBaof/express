@@ -7,47 +7,47 @@ qiniu.conf.ACCESS_KEY = 'vD3FhrJ0lQpFYdl4LmjHMN1rwwRnFzBnneuqSYzs';
 qiniu.conf.SECRET_KEY = '7VJXHhikzu8RF5C_3TLWqOaHcDLOkG2OIZLU6sc-';
 qiniu.conf.RPC_TIMEOUT = 10;
 
-var mongoose = require('mongoose');
+// var mongoose = require('mongoose');
 
-require('./model.js');
+// require('./model.js');
 
-var wechat = mongoose.model('wechat');
+// var wechat = mongoose.model('wechat');
 // console.log(wechat);
 
 
 
-app.get('/wechat', function(req, res) {
-	var info = '';
-	wechat.find({}, function (err, doc) {
-		if (err) {
-			console.log('err: ', err);
-			return;
-		}
-		console.log('doc: ', doc);
-		info = doc;
-		res.send(doc);
-	});
-});
+// app.get('/wechat', function(req, res) {
+// 	var info = '';
+// 	wechat.find({}, function (err, doc) {
+// 		if (err) {
+// 			console.log('err: ', err);
+// 			return;
+// 		}
+// 		console.log('doc: ', doc);
+// 		info = doc;
+// 		res.send(doc);
+// 	});
+// });
 
-app.get('/find/:name?/:age?', function(req, res) {
-	console.log(req.params);
-	var where = {};
-	if (req.params.name) {
-		where.name = req.params.name;
-	}
-	if (req.params.age) {
-		where.age = req.params.age;
-	}
-	console.log('where: ', where);
-	wechat.find(where, function (err, doc) {
-		if (err) {
-			console.log('err: ', err);
-			return;
-		}
-		console.log('doc: ', doc);
-		res.send(doc);
-	});
-});
+// app.get('/find/:name?/:age?', function(req, res) {
+// 	console.log(req.params);
+// 	var where = {};
+// 	if (req.params.name) {
+// 		where.name = req.params.name;
+// 	}
+// 	if (req.params.age) {
+// 		where.age = req.params.age;
+// 	}
+// 	console.log('where: ', where);
+// 	wechat.find(where, function (err, doc) {
+// 		if (err) {
+// 			console.log('err: ', err);
+// 			return;
+// 		}
+// 		console.log('doc: ', doc);
+// 		res.send(doc);
+// 	});
+// });
 
 
 
