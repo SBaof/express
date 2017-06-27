@@ -1,0 +1,19 @@
+{
+  "name": "express_demo",
+  "version": "1.0.0",
+  "description": "express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "dcloud",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.15.3",
+    "mongoose": "^4.10.8",
+    "qiniu": "^6.1.13"
+  }
+}
